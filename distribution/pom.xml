@@ -27,6 +27,8 @@
     <packaging>pom</packaging>
 
     <profiles>
+
+        <!--release-all-->
         <profile>
             <id>release-all</id>
             <dependencies>
@@ -73,6 +75,7 @@
             </build>
         </profile>
 
+        <!--release-client-->
         <profile>
             <id>release-client</id>
             <dependencies>
