@@ -83,13 +83,17 @@ public class MQAdminStartup {
     protected static List<SubCommand> subCommandList = new ArrayList<SubCommand>();
 
     public static void main(String[] args) {
+
+//        System.setProperty(MixAll.ROCKETMQ_HOME_PROPERTY, "/opt/websuite/apache-rocketmq-bin");
+//        args = "statsAll -n localhost:9876".split(" ");
+//        args = "topicStatus -n localhost:9876 -t TopicTest".split(" ");
+
         main0(args, null);
     }
 
     public static void main0(String[] args, RPCHook rpcHook) {
         System.setProperty(RemotingCommand.REMOTING_VERSION_KEY, Integer.toString(MQVersion.CURRENT_VERSION));
 
-        //PackageConflictDetect.detectFastjson();
 
         initCommand();
 
